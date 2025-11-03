@@ -1,0 +1,90 @@
+---
+title: Offerings
+---
+
+import { Image } from 'astro:assets';
+import cookies from '../../assets/photos/cookies.jpg';
+import cake from '../../assets/photos/apple-bourbon-cake.jpg';
+import scones from '../../assets/photos/scones.jpg';
+
+## Our Offerings
+See the treats we have to offer!
+
+<>
+Check out our <a href="https://www.facebook.com/people/The-Celiac-Shack-Gluten-Free-Desserts/61582682039160/" target="_blank" rel="noopener noreferrer" class="inline-block underline"> Facebook page </a> for seasonal items.
+</>
+
+<div class="grid grid-cols-1 md:grid-cols-2 sm:gap-1">
+
+  <div class="order-1 md:order-none">
+    <h3>Cookies</h3>
+    <ul class="space-y-1">
+      <li>Sugar Sprinkles</li>
+      <li>Chocolate Peanut Butter</li>
+      <li>Gingersnaps</li>
+      <li>Oatmeal Raisin</li>
+      <li>Classic Chocolate Chip</li>
+    </ul>
+  </div>
+
+  <div class="order-2 md:order-none">
+    <figure class="flex flex-col items-center gap-0">
+      <Image
+         src={cookies}
+         alt="Cookies"
+         class="rounded-lg w-full max-w-sm" 
+      />
+      <figcaption class="text-sm italic m-0">
+         {"Sugar Sprinkle Cookies"}
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="order-3 md:order-none">
+    <h3>Cakes & Crumbles</h3>
+    <ul class="space-y-1">
+      <li>Apple Bourbon Cake</li>
+      <li>Vanilla Cupcake with Buttercream Frosting</li>
+      <li>Chocolate Cupcake with Buttercream Frosting</li>
+      <li>Fudgy Chocolate Torte</li>
+      <li>Blueberry Coffee Cake with Streusel Topping</li>
+      <li>Old Fashioned Apple Crisp</li>
+      <li>Pecan Praline Cheesecake</li>
+    </ul>
+  </div>
+
+  <div class="order-4 md:order-none md:pt-4">
+    <figure class="flex flex-col items-center gap-0">
+      <Image
+         src={cake}
+         alt="Apple bourbon cake"
+         class="rounded-lg w-full max-w-sm" 
+      />
+      <figcaption class="text-sm italic m-0">
+         {"Apple Bourbon Cake"}
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="order-5 md:order-none">
+    <h3>Muffins & Scones</h3>
+    <ul class="space-y-1">
+      <li>Carrot Spice Mini Muffins</li>
+      <li>Cream Scones</li>
+    </ul>
+  </div>
+
+  <div class="order-6 md:order-none md:pt-4">
+    <figure class="flex flex-col items-center gap-0">
+      <Image
+         src={scones}
+         alt="Cream scones"
+         class="rounded-lg w-full max-w-sm" 
+      />
+      <figcaption class="text-sm italic m-0">
+         {"Cream Scones"}
+      </figcaption>
+    </figure>
+  </div>
+
+</div>

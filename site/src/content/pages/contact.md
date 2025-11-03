@@ -2,6 +2,8 @@
 title: Contact
 ---
 
+## Contact Us
+
 Have a question or want to place an order?
 <p>
 <a href="https://www.facebook.com/people/The-Celiac-Shack-Gluten-Free-Desserts/61582682039160/" target="_blank" rel="noopener noreferrer" class="inline-block underline">

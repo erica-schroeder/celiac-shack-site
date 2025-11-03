@@ -10,15 +10,16 @@ import {
     Stack,
     Typography
 } from "@mui/material";
+import logo from "../assets/logo-cropped.png";
 import { useState } from "react";
 
 const navItems = [
-  { label: "About", href: "/about" },
-  { label: "Offerings", href: "/offerings" },
-  { label: "Contact", href: "/contact" },
+  { label: "About", href: "about" },
+  { label: "Offerings", href: "offerings" },
+  { label: "Contact", href: "contact" },
 ];
 
-export default function Header() {
+export default function Header({ base }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -29,7 +30,7 @@ export default function Header() {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", minWidth: 150 }}>
       <List>
         {navItems.map((item) => (
-          <ListItem button component="a" href={item.href} key={item.label}>
+          <ListItem button component="a" href={`${import.meta.env.BASE_URL}/${item.href}`} key={item.label}>
             <ListItemText primaryTypographyProps={{fontFamily: 'var(--font-heading)' }} primary={item.label} />
           </ListItem>
         ))}
@@ -38,10 +39,10 @@ export default function Header() {
   );
 
     const Logo = ({ sx, ...props }) => (
-        <a href="/">
+        <a href={import.meta.env.BASE_URL}>
             <Box
                 component="img"
-                src="/logo-cropped.png"
+                src={logo.src}
                 alt="Logo"
                 sx={{
                     pt: 1,
@@ -67,7 +68,7 @@ export default function Header() {
                             <>
                             <Typography
                                 component="a"
-                                href={item.href}
+                                href={`${import.meta.env.BASE_URL}/${item.href}`}
                                 key={item.label}
                                 sx={{
                                     color: "inherit",

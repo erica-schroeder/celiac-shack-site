@@ -1,14 +1,6 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-@font-face {
-  font-family: "Alice";
-  src: url("/fonts/Alice-Regular.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
 .prose ul li {
   margin-bottom: 0.25rem; /* reduce vertical spacing */
   margin-top: 0.25rem; /* reduce vertical spacing */

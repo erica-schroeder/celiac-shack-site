@@ -1,6 +1,7 @@
 ---
-import Header from "../components/AppBar.jsx";
+import AppBar from "../components/AppBar.jsx";
 import "../styles/global.css";
+import "@fontsource/alice";
 const { title, description } = Astro.props;
 ---
 
@@ -20,8 +21,8 @@ const { title, description } = Astro.props;
         <meta name="description" content={description} />
     </head>
     <body class="bg-background text-stone-900">
-        <Header client:load />
-        <main class="max-w-4xl mx-auto px-10 py-10">
+        <AppBar client:load />
+        <main class="max-w-5xl mx-auto py-10 px-10">
             <slot />
         </main>
         <footer

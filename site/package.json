@@ -6,11 +6,15 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.9",
     "@astrojs/react": "^4.4.1",
     "@emotion/styled": "^11.14.1",
+    "@fontsource/alice": "^5.2.8",
     "@mui/icons-material": "^7.3.4",
     "@mui/material": "^7.3.4",
     "@tailwindcss/vite": "^4.1.16",
@@ -20,6 +24,7 @@
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.19"
+    "@tailwindcss/typography": "^0.5.19",
+    "gh-pages": "^6.3.0"
   }
 }
