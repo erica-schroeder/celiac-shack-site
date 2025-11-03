@@ -10,6 +10,7 @@
   --color-primary: oklch(0.45 0.26 264);
   --color-header-bg: oklch(0.9585 0.0098 87.47);
   --color-header-text: oklch(0.3 0.04 72.1);
+  --color-text: oklch(0.3 0.04 72.1);
   --color-header-accent: oklch(0.4 0.07 142.92);
   --color-background: oklch(0.98 0 0);
   --font-display: "Satoshi", "sans-serif";
@@ -20,3 +21,9 @@
   /* ... */
 }
 
+.dark {
+  --color-text: oklch(0.3 0.04 72.1);
+  --color-background: oklch(0.98 0 0);
+  --color-header-bg: oklch(0.9585 0.0098 87.47);
+  --color-header-accent: oklch(0.4 0.07 142.92);
+}
