@@ -2,7 +2,9 @@ import CookiesPhoto from '@/assets/photos/cookies.jpg';
 import AppleBourbonCakePhoto from '@/assets/photos/apple-bourbon-cake.jpg';
 import SconesPhoto from '@/assets/photos/scones.jpg';
 import { GridLayout } from '@/pages/offerings/GridLayout';
+import { MenuSection, MenuItemRow } from '@/pages/offerings/MenuSection';
 import { ImageWithCaption } from '@/components/ImageWithCaption';
+import { Grid, Box } from '@mui/material';
 
 # Our Offerings
 See the treats we have to offer!
@@ -11,55 +13,54 @@ Check out our <a href="https://www.facebook.com/people/The-Celiac-Shack-Gluten-F
 
 <br/>
 
-<GridLayout
-sections={[{
-    left: <>
-            <h2>Cookies</h2>
-            <ul>
-                  <li>Sugar Sprinkles</li>
-                  <li>Chocolate Peanut Butter</li>
-                  <li>Gingersnaps</li>
-                  <li>Oatmeal Raisin</li>
-                  <li>Classic Chocolate Chip</li>
-            </ul>
-          </>,
-    right: 
+
+<MenuSection
+  title="Cookies"
+  image={
         <ImageWithCaption
            src={CookiesPhoto}
-           alt="Sugar Sprinkle Cookies" 
-           caption="Sugar Sprinkle Cookies" 
+           alt="Sprinkle Sugar Cookies" 
+           caption="Sprinkle Sugar Cookies" 
         />
-   }, {
-   left: <>
-           <h2>Cakes & Crumbles</h2>
-           <ul>
-                 <li>Apple Bourbon Cake</li>
-                 <li>Vanilla Cupcake with Buttercream Frosting</li>
-                 <li>Chocolate Cupcake with Buttercream Frosting</li>
-                 <li>Fudgy Chocolate Torte</li>
-                 <li>Blueberry Coffee Cake with Streusel Topping</li>
-                 <li>Old Fashioned Apple Crisp</li>
-                 <li>Pecan Praline Cheesecake</li>
-           </ul>
-         </>,
-     right:
+        }
+>
+  <MenuItemRow name="Chocolate Peanut Butter" price="$32.00/doz" />
+  <MenuItemRow name="Sprinkle Sugar" price="$28.00/doz" />
+  <MenuItemRow name="Oatmeal Raisin" price="$28.00/doz" />
+  <MenuItemRow name="Classic Chocolate Chip" price="$28.00/doz" />
+  <MenuItemRow name="Spicy Gingersnaps" price="$28.00/doz" />
+</MenuSection>
+
+<MenuSection
+  title="Cakes & Crumbles"
+  image={
        <ImageWithCaption
           src={AppleBourbonCakePhoto}
           alt="Apple Bourbon Cake" 
           caption="Apple Bourbon Cake" 
        />
-   }, {
-   left: <>
-           <h2>Muffins & Scones</h2>
-           <ul>
-                 <li>Carrot Spice Mini Muffins</li>
-                 <li>Cream Scones</li>
-           </ul>
-         </>,
-     right:
+        }
+>
+  <MenuItemRow name="Vanilla or Chocolate Cupcakes with Buttercream Frosting" price="$30.00/doz" />
+  <MenuItemRow name="Red Velvet Cupcakes" price="$28.00/doz" />
+  <MenuItemRow name="Bourbon Apple Cake" price="$40.00" />
+  <MenuItemRow name="Fudgy Chocolate Torte" price="$35.00" />
+  <MenuItemRow name="Blueberry Coffee Cake with Streusel Topping" price="$32.00" />
+  <MenuItemRow name="Pecan Praline Cheesecake" price="$50.00" />
+  <MenuItemRow name="White Chocolate Cheesecake" price="$52.00" />
+  <MenuItemRow name="Old Fashioned Apple Crisp" price="$39.00" />
+</MenuSection>
+
+<MenuSection
+  title="Muffins & Scones"
+  image={
        <ImageWithCaption
           src={SconesPhoto}
           alt="Cream Scones" 
           caption="Cream Scones" 
        />
-}]} />
+        }
+>
+  <MenuItemRow name="Carrot Spice Mini Muffins" price="$28.00/two doz" />
+  <MenuItemRow name="Cream Scones" price="$30.00/doz" />
+</MenuSection>
