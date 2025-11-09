@@ -5,7 +5,8 @@ import { defineConfig } from 'vite';
 
 // https://vite.dev/config/
 export default defineConfig(({mode}) => ({
-  base: '/site-celiac-shack/',
+  base: '/',
+  //base: '/site-celiac-shack/',
   plugins: [
     { enforce: 'pre', ...mdx() },
     react(),

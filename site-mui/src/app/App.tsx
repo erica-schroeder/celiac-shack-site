@@ -1,5 +1,5 @@
 import { AppBarNavLayout } from '@erica/mui-web';
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { Route, Routes } from 'react-router';
 import { ClickableLogo } from '../components/ClickableLogo';
 import { Footer } from '../components/Footer';
@@ -23,12 +23,14 @@ export const App: React.FC = () => {
       footer={<Footer />}
       navItemDivider={<Typography>🙚</Typography>}
     >
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/offerings" element={<OfferingsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
+      <Box sx={{ mt: 2 }}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/offerings" element={<OfferingsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Box>
     </AppBarNavLayout>
   );
 };
